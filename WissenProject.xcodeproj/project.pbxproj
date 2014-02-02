@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4C189E6282002D9BD6 /* Foundation.framework */; };
+		C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */; };
+		C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
+		C585BA57189E6282002D9BD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C585BA55189E6282002D9BD6 /* InfoPlist.strings */; };
+		C585BA59189E6282002D9BD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA58189E6282002D9BD6 /* main.m */; };
+		C585BA5D189E6282002D9BD6 /* WPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA5C189E6282002D9BD6 /* WPAppDelegate.m */; };
+		C585BA60189E6282002D9BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C585BA5E189E6282002D9BD6 /* Main.storyboard */; };
+		C585BA65189E6282002D9BD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C585BA64189E6282002D9BD6 /* Images.xcassets */; };
+		C585BA6C189E6282002D9BD6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA6B189E6282002D9BD6 /* XCTest.framework */; };
+		C585BA6D189E6282002D9BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4C189E6282002D9BD6 /* Foundation.framework */; };
+		C585BA6E189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
+		C585BA76189E6282002D9BD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C585BA74189E6282002D9BD6 /* InfoPlist.strings */; };
+		C585BA78189E6282002D9BD6 /* WissenProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA77189E6282002D9BD6 /* WissenProjectTests.m */; };
+		C585BA82189E6392002D9BD6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA81189E6392002D9BD6 /* Parse.framework */; };
+		C585BA86189E6931002D9BD6 /* WPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA85189E6931002D9BD6 /* WPUser.m */; };
+		C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA88189E695B002D9BD6 /* WPMessage.m */; };
+		C585BA8D189E6DFB002D9BD6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA8A189E6DFB002D9BD6 /* AudioToolbox.framework */; };
+		C585BA8E189E6DFB002D9BD6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA8B189E6DFB002D9BD6 /* CFNetwork.framework */; };
+		C585BA8F189E6DFB002D9BD6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA8C189E6DFB002D9BD6 /* CoreLocation.framework */; };
+		C585BA91189E6E06002D9BD6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA90189E6E06002D9BD6 /* libz.dylib */; };
+		C585BA93189E6E10002D9BD6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA92189E6E10002D9BD6 /* MobileCoreServices.framework */; };
+		C585BA95189E6E18002D9BD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA94189E6E18002D9BD6 /* QuartzCore.framework */; };
+		C585BA97189E6E27002D9BD6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA96189E6E27002D9BD6 /* Security.framework */; };
+		C585BA99189E6E2D002D9BD6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA98189E6E2D002D9BD6 /* StoreKit.framework */; };
+		C585BA9B189E6E37002D9BD6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA9A189E6E37002D9BD6 /* SystemConfiguration.framework */; };
+		C585BA9F189E70DC002D9BD6 /* WPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA9E189E70DC002D9BD6 /* WPViewController.m */; };
+		C585BAA2189E714C002D9BD6 /* UserListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAA1189E714C002D9BD6 /* UserListVC.m */; };
+		C585BAA5189E71A1002D9BD6 /* ProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAA4189E71A1002D9BD6 /* ProfileVC.m */; };
+		C585BAA8189E71AF002D9BD6 /* MessageListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAA7189E71AF002D9BD6 /* MessageListVC.m */; };
+		C585BAAB189E71BF002D9BD6 /* NewMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAAA189E71BF002D9BD6 /* NewMessageVC.m */; };
+		C585BAAE189E739E002D9BD6 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAAD189E739E002D9BD6 /* LoginVC.m */; };
+		C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAB0189E73BA002D9BD6 /* RegisterVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C585BA6F189E6282002D9BD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C585BA41189E6282002D9BD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C585BA48189E6282002D9BD6;
+			remoteInfo = WissenProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C585BA49189E6282002D9BD6 /* WissenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WissenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C585BA4C189E6282002D9BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C585BA50189E6282002D9BD6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C585BA54189E6282002D9BD6 /* WissenProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WissenProject-Info.plist"; sourceTree = "<group>"; };
+		C585BA56189E6282002D9BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C585BA58189E6282002D9BD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C585BA5A189E6282002D9BD6 /* WissenProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WissenProject-Prefix.pch"; sourceTree = "<group>"; };
+		C585BA5B189E6282002D9BD6 /* WPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPAppDelegate.h; sourceTree = "<group>"; };
+		C585BA5C189E6282002D9BD6 /* WPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPAppDelegate.m; sourceTree = "<group>"; };
+		C585BA5F189E6282002D9BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C585BA64189E6282002D9BD6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C585BA6A189E6282002D9BD6 /* WissenProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WissenProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C585BA6B189E6282002D9BD6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C585BA73189E6282002D9BD6 /* WissenProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WissenProjectTests-Info.plist"; sourceTree = "<group>"; };
+		C585BA75189E6282002D9BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C585BA77189E6282002D9BD6 /* WissenProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WissenProjectTests.m; sourceTree = "<group>"; };
+		C585BA81189E6392002D9BD6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WissenProject/Libraries/Parse.framework; sourceTree = "<group>"; };
+		C585BA84189E6931002D9BD6 /* WPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPUser.h; sourceTree = "<group>"; };
+		C585BA85189E6931002D9BD6 /* WPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPUser.m; sourceTree = "<group>"; };
+		C585BA87189E695B002D9BD6 /* WPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMessage.h; sourceTree = "<group>"; };
+		C585BA88189E695B002D9BD6 /* WPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPMessage.m; sourceTree = "<group>"; };
+		C585BA8A189E6DFB002D9BD6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C585BA8B189E6DFB002D9BD6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C585BA8C189E6DFB002D9BD6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C585BA90189E6E06002D9BD6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C585BA92189E6E10002D9BD6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C585BA94189E6E18002D9BD6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C585BA96189E6E27002D9BD6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C585BA98189E6E2D002D9BD6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C585BA9A189E6E37002D9BD6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C585BA9D189E70DC002D9BD6 /* WPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPViewController.h; sourceTree = "<group>"; };
+		C585BA9E189E70DC002D9BD6 /* WPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPViewController.m; sourceTree = "<group>"; };
+		C585BAA0189E714C002D9BD6 /* UserListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListVC.h; sourceTree = "<group>"; };
+		C585BAA1189E714C002D9BD6 /* UserListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListVC.m; sourceTree = "<group>"; };
+		C585BAA3189E71A1002D9BD6 /* ProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileVC.h; sourceTree = "<group>"; };
+		C585BAA4189E71A1002D9BD6 /* ProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileVC.m; sourceTree = "<group>"; };
+		C585BAA6189E71AF002D9BD6 /* MessageListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListVC.h; sourceTree = "<group>"; };
+		C585BAA7189E71AF002D9BD6 /* MessageListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListVC.m; sourceTree = "<group>"; };
+		C585BAA9189E71BF002D9BD6 /* NewMessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMessageVC.h; sourceTree = "<group>"; };
+		C585BAAA189E71BF002D9BD6 /* NewMessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMessageVC.m; sourceTree = "<group>"; };
+		C585BAAC189E739E002D9BD6 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		C585BAAD189E739E002D9BD6 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		C585BAAF189E73BA002D9BD6 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		C585BAB0189E73BA002D9BD6 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C585BA46189E6282002D9BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BA9B189E6E37002D9BD6 /* SystemConfiguration.framework in Frameworks */,
+				C585BA99189E6E2D002D9BD6 /* StoreKit.framework in Frameworks */,
+				C585BA97189E6E27002D9BD6 /* Security.framework in Frameworks */,
+				C585BA95189E6E18002D9BD6 /* QuartzCore.framework in Frameworks */,
+				C585BA93189E6E10002D9BD6 /* MobileCoreServices.framework in Frameworks */,
+				C585BA91189E6E06002D9BD6 /* libz.dylib in Frameworks */,
+				C585BA8D189E6DFB002D9BD6 /* AudioToolbox.framework in Frameworks */,
+				C585BA8E189E6DFB002D9BD6 /* CFNetwork.framework in Frameworks */,
+				C585BA8F189E6DFB002D9BD6 /* CoreLocation.framework in Frameworks */,
+				C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */,
+				C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */,
+				C585BA82189E6392002D9BD6 /* Parse.framework in Frameworks */,
+				C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C585BA67189E6282002D9BD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BA6C189E6282002D9BD6 /* XCTest.framework in Frameworks */,
+				C585BA6E189E6282002D9BD6 /* UIKit.framework in Frameworks */,
+				C585BA6D189E6282002D9BD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C585BA40189E6282002D9BD6 = {
+			isa = PBXGroup;
+			children = (
+				C585BA52189E6282002D9BD6 /* WissenProject */,
+				C585BA71189E6282002D9BD6 /* WissenProjectTests */,
+				C585BA4B189E6282002D9BD6 /* Frameworks */,
+				C585BA4A189E6282002D9BD6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C585BA4A189E6282002D9BD6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA49189E6282002D9BD6 /* WissenProject.app */,
+				C585BA6A189E6282002D9BD6 /* WissenProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C585BA4B189E6282002D9BD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA9A189E6E37002D9BD6 /* SystemConfiguration.framework */,
+				C585BA98189E6E2D002D9BD6 /* StoreKit.framework */,
+				C585BA96189E6E27002D9BD6 /* Security.framework */,
+				C585BA94189E6E18002D9BD6 /* QuartzCore.framework */,
+				C585BA92189E6E10002D9BD6 /* MobileCoreServices.framework */,
+				C585BA90189E6E06002D9BD6 /* libz.dylib */,
+				C585BA8A189E6DFB002D9BD6 /* AudioToolbox.framework */,
+				C585BA8B189E6DFB002D9BD6 /* CFNetwork.framework */,
+				C585BA8C189E6DFB002D9BD6 /* CoreLocation.framework */,
+				C585BA81189E6392002D9BD6 /* Parse.framework */,
+				C585BA4C189E6282002D9BD6 /* Foundation.framework */,
+				C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */,
+				C585BA50189E6282002D9BD6 /* UIKit.framework */,
+				C585BA6B189E6282002D9BD6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C585BA52189E6282002D9BD6 /* WissenProject */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA9C189E70DC002D9BD6 /* ViewControllers */,
+				C585BA83189E6902002D9BD6 /* Model */,
+				C585BA5B189E6282002D9BD6 /* WPAppDelegate.h */,
+				C585BA5C189E6282002D9BD6 /* WPAppDelegate.m */,
+				C585BA5E189E6282002D9BD6 /* Main.storyboard */,
+				C585BA53189E6282002D9BD6 /* Supporting Files */,
+			);
+			path = WissenProject;
+			sourceTree = "<group>";
+		};
+		C585BA53189E6282002D9BD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA64189E6282002D9BD6 /* Images.xcassets */,
+				C585BA54189E6282002D9BD6 /* WissenProject-Info.plist */,
+				C585BA55189E6282002D9BD6 /* InfoPlist.strings */,
+				C585BA58189E6282002D9BD6 /* main.m */,
+				C585BA5A189E6282002D9BD6 /* WissenProject-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C585BA71189E6282002D9BD6 /* WissenProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA77189E6282002D9BD6 /* WissenProjectTests.m */,
+				C585BA72189E6282002D9BD6 /* Supporting Files */,
+			);
+			path = WissenProjectTests;
+			sourceTree = "<group>";
+		};
+		C585BA72189E6282002D9BD6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA73189E6282002D9BD6 /* WissenProjectTests-Info.plist */,
+				C585BA74189E6282002D9BD6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C585BA83189E6902002D9BD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA84189E6931002D9BD6 /* WPUser.h */,
+				C585BA85189E6931002D9BD6 /* WPUser.m */,
+				C585BA87189E695B002D9BD6 /* WPMessage.h */,
+				C585BA88189E695B002D9BD6 /* WPMessage.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C585BA9C189E70DC002D9BD6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C585BA9D189E70DC002D9BD6 /* WPViewController.h */,
+				C585BA9E189E70DC002D9BD6 /* WPViewController.m */,
+				C585BAA0189E714C002D9BD6 /* UserListVC.h */,
+				C585BAA1189E714C002D9BD6 /* UserListVC.m */,
+				C585BAA3189E71A1002D9BD6 /* ProfileVC.h */,
+				C585BAA4189E71A1002D9BD6 /* ProfileVC.m */,
+				C585BAA6189E71AF002D9BD6 /* MessageListVC.h */,
+				C585BAA7189E71AF002D9BD6 /* MessageListVC.m */,
+				C585BAA9189E71BF002D9BD6 /* NewMessageVC.h */,
+				C585BAAA189E71BF002D9BD6 /* NewMessageVC.m */,
+				C585BAAC189E739E002D9BD6 /* LoginVC.h */,
+				C585BAAD189E739E002D9BD6 /* LoginVC.m */,
+				C585BAAF189E73BA002D9BD6 /* RegisterVC.h */,
+				C585BAB0189E73BA002D9BD6 /* RegisterVC.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C585BA48189E6282002D9BD6 /* WissenProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C585BA7B189E6282002D9BD6 /* Build configuration list for PBXNativeTarget "WissenProject" */;
+			buildPhases = (
+				C585BA45189E6282002D9BD6 /* Sources */,
+				C585BA46189E6282002D9BD6 /* Frameworks */,
+				C585BA47189E6282002D9BD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WissenProject;
+			productName = WissenProject;
+			productReference = C585BA49189E6282002D9BD6 /* WissenProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C585BA69189E6282002D9BD6 /* WissenProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C585BA7E189E6282002D9BD6 /* Build configuration list for PBXNativeTarget "WissenProjectTests" */;
+			buildPhases = (
+				C585BA66189E6282002D9BD6 /* Sources */,
+				C585BA67189E6282002D9BD6 /* Frameworks */,
+				C585BA68189E6282002D9BD6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C585BA70189E6282002D9BD6 /* PBXTargetDependency */,
+			);
+			name = WissenProjectTests;
+			productName = WissenProjectTests;
+			productReference = C585BA6A189E6282002D9BD6 /* WissenProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C585BA41189E6282002D9BD6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Wissen;
+				TargetAttributes = {
+					C585BA69189E6282002D9BD6 = {
+						TestTargetID = C585BA48189E6282002D9BD6;
+					};
+				};
+			};
+			buildConfigurationList = C585BA44189E6282002D9BD6 /* Build configuration list for PBXProject "WissenProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C585BA40189E6282002D9BD6;
+			productRefGroup = C585BA4A189E6282002D9BD6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C585BA48189E6282002D9BD6 /* WissenProject */,
+				C585BA69189E6282002D9BD6 /* WissenProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C585BA47189E6282002D9BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BA65189E6282002D9BD6 /* Images.xcassets in Resources */,
+				C585BA57189E6282002D9BD6 /* InfoPlist.strings in Resources */,
+				C585BA60189E6282002D9BD6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C585BA68189E6282002D9BD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BA76189E6282002D9BD6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C585BA45189E6282002D9BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BAA5189E71A1002D9BD6 /* ProfileVC.m in Sources */,
+				C585BAAB189E71BF002D9BD6 /* NewMessageVC.m in Sources */,
+				C585BAAE189E739E002D9BD6 /* LoginVC.m in Sources */,
+				C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */,
+				C585BA59189E6282002D9BD6 /* main.m in Sources */,
+				C585BA86189E6931002D9BD6 /* WPUser.m in Sources */,
+				C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */,
+				C585BAA8189E71AF002D9BD6 /* MessageListVC.m in Sources */,
+				C585BA5D189E6282002D9BD6 /* WPAppDelegate.m in Sources */,
+				C585BA9F189E70DC002D9BD6 /* WPViewController.m in Sources */,
+				C585BAA2189E714C002D9BD6 /* UserListVC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C585BA66189E6282002D9BD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C585BA78189E6282002D9BD6 /* WissenProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C585BA70189E6282002D9BD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C585BA48189E6282002D9BD6 /* WissenProject */;
+			targetProxy = C585BA6F189E6282002D9BD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C585BA55189E6282002D9BD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C585BA56189E6282002D9BD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C585BA5E189E6282002D9BD6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C585BA5F189E6282002D9BD6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C585BA74189E6282002D9BD6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C585BA75189E6282002D9BD6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C585BA79189E6282002D9BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C585BA7A189E6282002D9BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C585BA7C189E6282002D9BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/suleymancalik/Documents/Projects/Wissen/WissenProject/WissenProject/Libraries,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
+				INFOPLIST_FILE = "WissenProject/WissenProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C585BA7D189E6282002D9BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/suleymancalik/Documents/Projects/Wissen/WissenProject/WissenProject/Libraries,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
+				INFOPLIST_FILE = "WissenProject/WissenProject-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C585BA7F189E6282002D9BD6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WissenProject.app/WissenProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WissenProjectTests/WissenProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C585BA80189E6282002D9BD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WissenProject.app/WissenProject";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
+				INFOPLIST_FILE = "WissenProjectTests/WissenProjectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C585BA44189E6282002D9BD6 /* Build configuration list for PBXProject "WissenProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C585BA79189E6282002D9BD6 /* Debug */,
+				C585BA7A189E6282002D9BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C585BA7B189E6282002D9BD6 /* Build configuration list for PBXNativeTarget "WissenProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C585BA7C189E6282002D9BD6 /* Debug */,
+				C585BA7D189E6282002D9BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C585BA7E189E6282002D9BD6 /* Build configuration list for PBXNativeTarget "WissenProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C585BA7F189E6282002D9BD6 /* Debug */,
+				C585BA80189E6282002D9BD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C585BA41189E6282002D9BD6 /* Project object */;
+}
