@@ -37,6 +37,27 @@
     return [emailTest evaluateWithObject:email];
 }
 
+-(void)signupWithUsername:(NSString *)username
+                    email:(NSString *)email
+                 password:(NSString *)password
+{
+    WPUser * newUser = [WPUser user];
+    newUser.username = username;
+    newUser.email = email;
+    newUser.password = password;
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded)
+        {
+            // Kayit basarili, uygulamayi kullanmaya devam et
+        }
+        else
+        {
+            // Handle error!
+        }
+    }];
+
+}
+
 -(void)checkFieldsAndRegister
 {
     NSString * name = self.txtNameSurname.text;
@@ -56,7 +77,7 @@
                     {
                         if ([self isValidEmail:email])
                         {
-                            // parse'da yeni kullanici olustur!!!
+                            [self signupWithUsername:name email:email password:pass1];
                         }
                         else
                         {

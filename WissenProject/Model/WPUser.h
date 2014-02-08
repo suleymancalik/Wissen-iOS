@@ -14,4 +14,6 @@
 
 @property(strong) PFFile * photo;
 
++(WPUser *)user;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface NewMessageVC : WPViewController
 
+@property(nonatomic,strong) WPUser * toUser;
+
 @end

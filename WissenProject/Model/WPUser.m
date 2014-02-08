@@ -13,4 +13,12 @@
 
 @dynamic photo;
 
+
++(WPUser *)user
+{
+    WPUser * user = [[WPUser alloc] init];
+    return user;
+}
+
+
 @end
