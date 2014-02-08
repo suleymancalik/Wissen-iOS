@@ -13,4 +13,6 @@
 -(void)showAlertWithTitle:(NSString *)title
                   message:(NSString *)message;
 
+-(BOOL)isValidEmail:(NSString *)email;
+
 @end

@@ -118,7 +118,7 @@
             </objects>
             <point key="canvasLocation" x="1118" y="-744"/>
         </scene>
-        <!--ProfileVC - Item-->
+        <!--ProfileVC - Profile-->
         <scene sceneID="lKE-bn-Iej">
             <objects>
                 <viewController id="ua7-Le-ALV" customClass="ProfileVC" sceneMemberID="viewController">
@@ -145,16 +145,55 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sWP-ib-JGA">
+                                <rect key="frame" x="110" y="81" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actPhoto:" destination="ua7-Le-ALV" eventType="touchUpInside" id="hxR-lV-IZk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ycP-HT-MH9">
+                                <rect key="frame" x="20" y="215" width="231" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="62q-p0-sot">
+                                <rect key="frame" x="259" y="215" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actUpdateEmail:" destination="ua7-Le-ALV" eventType="touchUpInside" id="Rcd-YO-oPs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fRD-GR-n7Y">
+                                <rect key="frame" x="23" y="193" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="YsU-Mm-7n6"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="YsU-Mm-7n6"/>
+                    <connections>
+                        <outlet property="btnPhoto" destination="sWP-ib-JGA" id="wL7-HW-zFK"/>
+                        <outlet property="txtEmail" destination="ycP-HT-MH9" id="Bgy-XN-ITy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJI-1y-Vbr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-96" y="-86"/>
         </scene>
-        <!--Message ListVC - Item-->
+        <!--Message ListVC - Messages-->
         <scene sceneID="Qsc-DS-Im1">
             <objects>
                 <viewController id="BUr-0Y-3De" customClass="MessageListVC" sceneMemberID="viewController">
@@ -177,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1gT-zq-ztL"/>
+                    <tabBarItem key="tabBarItem" title="Messages" id="1gT-zq-ztL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkU-Wc-fxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,11 +230,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e-mail" minimumFontSize="17" id="sBk-c4-Wzv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" clearButtonMode="whileEditing" id="sBk-c4-Wzv">
                                 <rect key="frame" x="20" y="48" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" id="vy0-ZN-MqH">
                                 <rect key="frame" x="20" y="98" width="280" height="30"/>
@@ -227,10 +266,17 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actLogin:" destination="kL4-7c-bDB" eventType="touchUpInside" id="Ol7-69-Egf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPassword" destination="vy0-ZN-MqH" id="599-SC-aVv"/>
+                        <outlet property="txtUsername" destination="sBk-c4-Wzv" id="872-GD-oRS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JnL-XH-vo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -373,11 +419,11 @@
             </objects>
             <point key="canvasLocation" x="-889" y="-147"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller - User List-->
         <scene sceneID="fMa-CB-YOa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jYT-Pd-GUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Gzk-LY-edA"/>
+                    <tabBarItem key="tabBarItem" title="User List" id="Gzk-LY-edA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyM-6L-eLB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
