@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C534740218A620A000DE48D7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C534740118A620A000DE48D7 /* Parse.framework */; };
 		C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4C189E6282002D9BD6 /* Foundation.framework */; };
 		C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */; };
 		C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
@@ -20,7 +21,6 @@
 		C585BA6E189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
 		C585BA76189E6282002D9BD6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C585BA74189E6282002D9BD6 /* InfoPlist.strings */; };
 		C585BA78189E6282002D9BD6 /* WissenProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA77189E6282002D9BD6 /* WissenProjectTests.m */; };
-		C585BA82189E6392002D9BD6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA81189E6392002D9BD6 /* Parse.framework */; };
 		C585BA86189E6931002D9BD6 /* WPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA85189E6931002D9BD6 /* WPUser.m */; };
 		C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BA88189E695B002D9BD6 /* WPMessage.m */; };
 		C585BA8D189E6DFB002D9BD6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA8A189E6DFB002D9BD6 /* AudioToolbox.framework */; };
@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C534740118A620A000DE48D7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WissenProject/Libraries/Parse.framework; sourceTree = "<group>"; };
 		C585BA49189E6282002D9BD6 /* WissenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WissenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C585BA4C189E6282002D9BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,7 +70,6 @@
 		C585BA73189E6282002D9BD6 /* WissenProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WissenProjectTests-Info.plist"; sourceTree = "<group>"; };
 		C585BA75189E6282002D9BD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C585BA77189E6282002D9BD6 /* WissenProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WissenProjectTests.m; sourceTree = "<group>"; };
-		C585BA81189E6392002D9BD6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WissenProject/Libraries/Parse.framework; sourceTree = "<group>"; };
 		C585BA84189E6931002D9BD6 /* WPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPUser.h; sourceTree = "<group>"; };
 		C585BA85189E6931002D9BD6 /* WPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPUser.m; sourceTree = "<group>"; };
 		C585BA87189E695B002D9BD6 /* WPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPMessage.h; sourceTree = "<group>"; };
@@ -104,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C534740218A620A000DE48D7 /* Parse.framework in Frameworks */,
 				C585BA9B189E6E37002D9BD6 /* SystemConfiguration.framework in Frameworks */,
 				C585BA99189E6E2D002D9BD6 /* StoreKit.framework in Frameworks */,
 				C585BA97189E6E27002D9BD6 /* Security.framework in Frameworks */,
@@ -115,7 +116,6 @@
 				C585BA8F189E6DFB002D9BD6 /* CoreLocation.framework in Frameworks */,
 				C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */,
 				C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */,
-				C585BA82189E6392002D9BD6 /* Parse.framework in Frameworks */,
 				C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +155,7 @@
 		C585BA4B189E6282002D9BD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C534740118A620A000DE48D7 /* Parse.framework */,
 				C585BA9A189E6E37002D9BD6 /* SystemConfiguration.framework */,
 				C585BA98189E6E2D002D9BD6 /* StoreKit.framework */,
 				C585BA96189E6E27002D9BD6 /* Security.framework */,
@@ -164,7 +165,6 @@
 				C585BA8A189E6DFB002D9BD6 /* AudioToolbox.framework */,
 				C585BA8B189E6DFB002D9BD6 /* CFNetwork.framework */,
 				C585BA8C189E6DFB002D9BD6 /* CoreLocation.framework */,
-				C585BA81189E6392002D9BD6 /* Parse.framework */,
 				C585BA4C189E6282002D9BD6 /* Foundation.framework */,
 				C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */,
 				C585BA50189E6282002D9BD6 /* UIKit.framework */,
@@ -485,7 +485,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/suleymancalik/Documents/Projects/Wissen/WissenProject/WissenProject/Libraries,
+					"$(SRCROOT)/WissenProject/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
@@ -502,7 +502,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/suleymancalik/Documents/Projects/Wissen/WissenProject/WissenProject/Libraries,
+					"$(SRCROOT)/WissenProject/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
@@ -573,6 +573,7 @@
 				C585BA7D189E6282002D9BD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C585BA7E189E6282002D9BD6 /* Build configuration list for PBXNativeTarget "WissenProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +582,7 @@
 				C585BA80189E6282002D9BD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
