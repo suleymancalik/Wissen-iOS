@@ -10,4 +10,7 @@
 
 @interface WPViewController : UIViewController
 
+-(void)showAlertWithTitle:(NSString *)title
+                  message:(NSString *)message;
+
 @end
