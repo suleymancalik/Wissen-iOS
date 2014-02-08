@@ -9,6 +9,7 @@
 #import "ProfileVC.h"
 
 @interface ProfileVC ()
+<UIActionSheetDelegate>
 
 @end
 
@@ -17,6 +18,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [WPUser logOut];
+        [self.tabBarController setSelectedIndex:0];
+    }
+}
+
+- (IBAction)actLogout:(id)sender
+{
+    UIActionSheet * actionSheet =
+    [[UIActionSheet alloc] initWithTitle:@"Are you sure?"
+                                delegate:self
+                       cancelButtonTitle:@"Cancel"
+                  destructiveButtonTitle:@"Logout"
+                       otherButtonTitles:nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    
 }
 
 

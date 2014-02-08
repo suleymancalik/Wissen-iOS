@@ -43,8 +43,7 @@
         }
         else
         {
-            // Mesaj olusturulamadi !
-            // error'dan bilgi al
+            [self showAlertWithTitle:@"Oopps" message:@"Couldn't send message!"];
         }
     }];
 }

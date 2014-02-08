@@ -48,10 +48,11 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded)
         {
-            // Kayit basarili, uygulamayi kullanmaya devam et
+            [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
         }
         else
         {
+            [self showAlertWithTitle:@"Register Error" message:error.description];
             // Handle error!
         }
     }];

@@ -24,7 +24,14 @@
 {
     [super viewDidLoad];
     
+}
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
+//    NSLog(@"UserListVC - viewDidAppear");
     WPUser * currentUser = [WPUser currentUser];
     if (currentUser)
     {
@@ -32,8 +39,12 @@
     }
     else
     {
+        self.allUsers = nil;
+        [self.tblUsers reloadData];
+        
         [self performSegueWithIdentifier:SegueLogin sender:self];
     }
+
 }
 
 
