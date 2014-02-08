@@ -31,7 +31,6 @@
 {
     [super viewDidAppear:animated];
     
-//    NSLog(@"UserListVC - viewDidAppear");
     WPUser * currentUser = [WPUser currentUser];
     if (currentUser)
     {
@@ -61,7 +60,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (error)
         {
-            // Hatayi kontrol et, kullaniciya goster
+            [self showAlertWithTitle:@"Oops" message:@"Cannot find other users!"];
         }
         else
         {

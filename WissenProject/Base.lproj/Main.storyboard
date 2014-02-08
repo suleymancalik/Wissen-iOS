@@ -390,9 +390,9 @@
                     </view>
                     <connections>
                         <outlet property="txtEmail" destination="jje-7R-YIr" id="t6C-i9-CVR"/>
-                        <outlet property="txtNameSurname" destination="THQ-qo-Hlg" id="uRB-Ec-DjH"/>
                         <outlet property="txtPassword" destination="26y-Q1-R38" id="nth-wr-X4L"/>
                         <outlet property="txtPasswordAgain" destination="4YI-v3-xqQ" id="ZRV-Og-37X"/>
+                        <outlet property="txtUsername" destination="THQ-qo-Hlg" id="jVu-24-IYh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oU9-Dp-xzT" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,7 +9,7 @@
 #import "RegisterVC.h"
 
 @interface RegisterVC ()
-@property (weak, nonatomic) IBOutlet UITextField *txtNameSurname;
+@property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtPasswordAgain;
@@ -43,8 +43,7 @@
         }
         else
         {
-            [self showAlertWithTitle:@"Register Error" message:error.description];
-            // Handle error!
+            [self showAlertWithTitle:@"Register Error" message:error.userInfo[@"error"]];
         }
     }];
 
@@ -52,12 +51,12 @@
 
 -(void)checkFieldsAndRegister
 {
-    NSString * name = self.txtNameSurname.text;
+    NSString * username = self.txtUsername.text;
     NSString * email = self.txtEmail.text;
     NSString * pass1 = self.txtPassword.text;
     NSString * pass2 = self.txtPasswordAgain.text;
     
-    if (name.length > 0)
+    if (username.length > 0)
     {
         if (email.length > 0)
         {
@@ -69,7 +68,7 @@
                     {
                         if ([self isValidEmail:email])
                         {
-                            [self signupWithUsername:name email:email password:pass1];
+                            [self signupWithUsername:username email:email password:pass1];
                         }
                         else
                         {
