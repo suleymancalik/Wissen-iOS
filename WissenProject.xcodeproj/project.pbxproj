@@ -10,6 +10,8 @@
 		C534740218A620A000DE48D7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C534740118A620A000DE48D7 /* Parse.framework */; };
 		C534740618A790E700DE48D7 /* blue-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = C534740418A790E700DE48D7 /* blue-dot.png */; };
 		C534740718A790E700DE48D7 /* blue-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C534740518A790E700DE48D7 /* blue-dot@2x.png */; };
+		C534741018A7B09600DE48D7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C534740C18A7B09600DE48D7 /* SVProgressHUD.bundle */; };
+		C534741118A7B09600DE48D7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C534740E18A7B09600DE48D7 /* SVProgressHUD.m */; };
 		C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4C189E6282002D9BD6 /* Foundation.framework */; };
 		C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */; };
 		C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
@@ -57,6 +59,10 @@
 		C534740118A620A000DE48D7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WissenProject/Libraries/Parse.framework; sourceTree = "<group>"; };
 		C534740418A790E700DE48D7 /* blue-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-dot.png"; sourceTree = "<group>"; };
 		C534740518A790E700DE48D7 /* blue-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-dot@2x.png"; sourceTree = "<group>"; };
+		C534740B18A7B09600DE48D7 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		C534740C18A7B09600DE48D7 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		C534740D18A7B09600DE48D7 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		C534740E18A7B09600DE48D7 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		C585BA49189E6282002D9BD6 /* WissenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WissenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C585BA4C189E6282002D9BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +152,25 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		C534740818A7B09600DE48D7 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C534740A18A7B09600DE48D7 /* SVProgressHUD */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C534740A18A7B09600DE48D7 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C534740B18A7B09600DE48D7 /* SVProgressHUD-Prefix.pch */,
+				C534740C18A7B09600DE48D7 /* SVProgressHUD.bundle */,
+				C534740D18A7B09600DE48D7 /* SVProgressHUD.h */,
+				C534740E18A7B09600DE48D7 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		C585BA40189E6282002D9BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +220,7 @@
 				C585BA5C189E6282002D9BD6 /* WPAppDelegate.m */,
 				C585BA5E189E6282002D9BD6 /* Main.storyboard */,
 				C534740318A790E700DE48D7 /* images */,
+				C534740818A7B09600DE48D7 /* Libraries */,
 				C585BA53189E6282002D9BD6 /* Supporting Files */,
 			);
 			path = WissenProject;
@@ -340,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C585BA65189E6282002D9BD6 /* Images.xcassets in Resources */,
+				C534741018A7B09600DE48D7 /* SVProgressHUD.bundle in Resources */,
 				C534740718A790E700DE48D7 /* blue-dot@2x.png in Resources */,
 				C585BA57189E6282002D9BD6 /* InfoPlist.strings in Resources */,
 				C585BA60189E6282002D9BD6 /* Main.storyboard in Resources */,
@@ -367,6 +394,7 @@
 				C585BAAE189E739E002D9BD6 /* LoginVC.m in Sources */,
 				C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */,
 				C585BA59189E6282002D9BD6 /* main.m in Sources */,
+				C534741118A7B09600DE48D7 /* SVProgressHUD.m in Sources */,
 				C585BA86189E6931002D9BD6 /* WPUser.m in Sources */,
 				C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */,
 				C585BAA8189E71AF002D9BD6 /* MessageListVC.m in Sources */,
@@ -502,6 +530,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/WissenProject/Libraries",
+					"/Users/suleymancalik/Documents/Projects/Wissen-iOS/WissenProject/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";
@@ -519,6 +548,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/WissenProject/Libraries",
+					"/Users/suleymancalik/Documents/Projects/Wissen-iOS/WissenProject/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WissenProject/WissenProject-Prefix.pch";

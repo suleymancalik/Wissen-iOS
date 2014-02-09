@@ -14,7 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-
+    #import "SVProgressHUD.h"
     #import <Parse/Parse.h>
     #import "WPUser.h"
     #import "WPMessage.h"

@@ -47,6 +47,7 @@
     WPUser * currentUser = [WPUser currentUser];
     if (currentUser)
     {
+        [SVProgressHUD show];
         [currentUser refreshInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             [self getAllUsers];
         }];
@@ -90,6 +91,8 @@
     WPUser * currentUser = [WPUser currentUser];
     [query whereKey:@"username" notEqualTo:currentUser.username];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        [SVProgressHUD dismiss];
         if (error)
         {
             [self showAlertWithTitle:@"Oops" message:@"Cannot find other users!"];
