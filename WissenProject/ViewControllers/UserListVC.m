@@ -52,6 +52,23 @@
 
 #pragma mark - Utility Methods
 
+-(void)getUnreadMessageCount
+{
+    PFQuery * query = [WPMessage query];
+    [query whereKey:@"to" equalTo:[WPUser currentUser]];
+    [query whereKey:@"isRead" notEqualTo:@(YES)];
+    
+    [query countObjectsInBackgroundWithBlock:^(int number, NSError *error) {
+        if (!error)
+        {
+            UITabBarItem * messagesItem = self.tabBarController.tabBar.items[2];
+            if(number > 0)
+                messagesItem.badgeValue = [NSString stringWithFormat:@"%d" , number];
+            else
+                messagesItem.badgeValue = nil;
+        }
+    }];
+}
 
 -(void)getAllUsers
 {
@@ -68,6 +85,8 @@
         {
             self.allUsers = objects;
             [self.tblUsers reloadData];
+            
+            [self getUnreadMessageCount];
         }
     }];
     

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C534740218A620A000DE48D7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C534740118A620A000DE48D7 /* Parse.framework */; };
+		C534740618A790E700DE48D7 /* blue-dot.png in Resources */ = {isa = PBXBuildFile; fileRef = C534740418A790E700DE48D7 /* blue-dot.png */; };
+		C534740718A790E700DE48D7 /* blue-dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C534740518A790E700DE48D7 /* blue-dot@2x.png */; };
 		C585BA4D189E6282002D9BD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4C189E6282002D9BD6 /* Foundation.framework */; };
 		C585BA4F189E6282002D9BD6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */; };
 		C585BA51189E6282002D9BD6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C585BA50189E6282002D9BD6 /* UIKit.framework */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		C534740118A620A000DE48D7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = WissenProject/Libraries/Parse.framework; sourceTree = "<group>"; };
+		C534740418A790E700DE48D7 /* blue-dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-dot.png"; sourceTree = "<group>"; };
+		C534740518A790E700DE48D7 /* blue-dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-dot@2x.png"; sourceTree = "<group>"; };
 		C585BA49189E6282002D9BD6 /* WissenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WissenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C585BA4C189E6282002D9BD6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C585BA4E189E6282002D9BD6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C534740318A790E700DE48D7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C534740418A790E700DE48D7 /* blue-dot.png */,
+				C534740518A790E700DE48D7 /* blue-dot@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		C585BA40189E6282002D9BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,7 @@
 				C585BA5B189E6282002D9BD6 /* WPAppDelegate.h */,
 				C585BA5C189E6282002D9BD6 /* WPAppDelegate.m */,
 				C585BA5E189E6282002D9BD6 /* Main.storyboard */,
+				C534740318A790E700DE48D7 /* images */,
 				C585BA53189E6282002D9BD6 /* Supporting Files */,
 			);
 			path = WissenProject;
@@ -326,8 +340,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C585BA65189E6282002D9BD6 /* Images.xcassets in Resources */,
+				C534740718A790E700DE48D7 /* blue-dot@2x.png in Resources */,
 				C585BA57189E6282002D9BD6 /* InfoPlist.strings in Resources */,
 				C585BA60189E6282002D9BD6 /* Main.storyboard in Resources */,
+				C534740618A790E700DE48D7 /* blue-dot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
