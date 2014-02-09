@@ -42,6 +42,7 @@
     PFQuery * query = [WPMessage query];
     [query includeKey:@"from"];
     [query whereKey:@"to" equalTo:[WPUser currentUser]];
+    [query orderByDescending:@"createdAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.messages = objects;
@@ -65,20 +66,24 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell"];
     
     WPMessage * message = self.messages[indexPath.row];
+    
 
     cell.textLabel.text = message.text;
     cell.detailTextLabel.text = message.from.username;
     
     if(message.isRead)
+    {
         cell.imageView.image = nil;
+    }
     else
+    {
         cell.imageView.image = [UIImage imageNamed:@"blue-dot"];
+        message.isRead = YES;
+        [message saveInBackground];
+    }
     
     return cell;
 }
-
-
-
 
 
 @end
