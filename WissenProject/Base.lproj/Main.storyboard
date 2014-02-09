@@ -13,12 +13,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qNe-qv-coe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="583"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="520"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="dDV-TX-tJi">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="vXZ-lx-hvc" id="EjL-cL-mzJ"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" textLabel="cQ5-ON-h9T" detailTextLabel="OOM-bV-qvF" style="IBUITableViewCellStyleValue1" id="Ux9-M9-UVZ">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ux9-M9-UVZ" id="kUW-mC-xCE">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -52,12 +60,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="User List" id="xDq-Qk-duJ"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="beQ-xQ-J6i" id="oqy-MG-FaF"/>
                         <outlet property="tblUsers" destination="qNe-qv-coe" id="dfN-c3-Dzh"/>
                         <segue destination="naC-mG-XvS" kind="push" identifier="NewMessageSegue" id="ipm-b3-9JT"/>
                         <segue destination="kL4-7c-bDB" kind="modal" identifier="LoginSegue" modalTransitionStyle="coverVertical" animates="NO" id="sHM-e0-OkN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="beQ-xQ-J6i">
+                    <connections>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="8pN-Uw-gNu"/>
+                        <outlet property="searchBar" destination="dDV-TX-tJi" id="jTw-DL-asX"/>
+                        <outlet property="searchContentsController" destination="vXZ-lx-hvc" id="pFL-D9-7C6"/>
+                        <outlet property="searchResultsDataSource" destination="vXZ-lx-hvc" id="qT5-KE-cxH"/>
+                        <outlet property="searchResultsDelegate" destination="vXZ-lx-hvc" id="dwi-yJ-G5U"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="425" y="-751"/>
         </scene>

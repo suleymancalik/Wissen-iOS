@@ -12,18 +12,31 @@
 #define SegueNewMessage @"NewMessageSegue"
 
 @interface UserListVC ()
-<UITableViewDataSource , UITableViewDelegate>
+<UITableViewDataSource , UITableViewDelegate , UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tblUsers;
+
 @property(nonatomic,strong) NSArray * allUsers;
+@property(nonatomic,strong) NSMutableArray * searchedUsers;
+@property(nonatomic) BOOL searching;
+
 @end
 
 @implementation UserListVC
+
+
+-(NSMutableArray *)searchedUsers
+{
+    if(!_searchedUsers)
+        _searchedUsers = [NSMutableArray array];
+    return _searchedUsers;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    [self.tblUsers setContentOffset:CGPointMake(0,44) animated:NO];
 }
 
 
@@ -85,6 +98,7 @@
         {
             self.allUsers = objects;
             [self.tblUsers reloadData];
+            [self.tblUsers setContentOffset:CGPointMake(0,-20) animated:NO];
             
             [self getUnreadMessageCount];
         }
@@ -107,19 +121,61 @@
     }
 }
 
+
+#pragma mark - SearchBar Methods
+
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    self.searching = YES;
+}
+
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    self.searching = NO;
+}
+
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    [self.searchedUsers removeAllObjects];
+    
+    [self.allUsers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        WPUser * user = obj;
+        NSRange range = [user.username rangeOfString:searchText options:NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch];
+        if(range.location != NSNotFound)
+        {
+            [self.searchedUsers addObject:user];
+        }
+    }];
+    
+}
+
+
+
 #pragma mark - TableView Methods
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.allUsers.count;
+    if(self.searching)
+        return self.searchedUsers.count;
+    else
+        return self.allUsers.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"UserCell"];
-    
-    WPUser * user = self.allUsers[indexPath.row];
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"UserCell"];
+    }
+    WPUser * user;
+    if(self.searching && self.searchedUsers.count > 0)
+        user = self.searchedUsers[indexPath.row];
+    else
+        user = self.allUsers[indexPath.row];
     cell.textLabel.text = user.username;
     cell.detailTextLabel.text = user.updatedAt.description;
     
