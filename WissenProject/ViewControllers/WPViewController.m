@@ -10,6 +10,7 @@
 
 @interface WPViewController ()
 
+@property(strong,nonatomic) UIImagePickerController * imagePicker;
 @end
 
 @implementation WPViewController
@@ -41,5 +42,50 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
 }
+
+
+#pragma mark - Photo/Video Methods
+
+-(void)imageSelected:(UIImage *)image
+{
+    // Ihtiyaci olan class'lar bu methodu override edecek.
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [self imageSelected:image];
+    [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)openImagePicker:(UIImagePickerControllerSourceType)type
+{
+    if([UIImagePickerController isSourceTypeAvailable:type])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        self.imagePicker.delegate = self;
+        [self.imagePicker setSourceType:type];
+        [self presentViewController:self.imagePicker animated:YES completion:nil];
+    }
+    else
+    {
+        [self showAlertWithTitle:@"Oops" message:@"Operation not available"];
+    }
+}
+
+-(void)openPhotoLibary
+{
+    [self openImagePicker:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+
+
+-(void)openCamera
+{
+    [self openImagePicker:UIImagePickerControllerSourceTypeCamera];
+}
+
+
+
 
 @end

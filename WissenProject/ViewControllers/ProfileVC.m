@@ -18,6 +18,8 @@
 @property (strong, nonatomic) UIActionSheet * asPhotoOptions;
 @property (strong, nonatomic) UIActionSheet * asNewPhoto;
 
+@property (nonatomic) BOOL imageCheckDisabled;
+
 @end
 
 @implementation ProfileVC
@@ -33,10 +35,19 @@
     [super viewDidAppear:animated];
     
     WPUser * currentUser = [WPUser currentUser];
-    if(currentUser.photo)
+    if (!self.imageCheckDisabled)
+    {
         [self.btnPhoto setImage:nil forState:UIControlStateNormal];
-    // TODO: user photo
-    
+        PFFile * userPhoto = currentUser.photo;
+        if(userPhoto)
+        {
+            [userPhoto getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                UIImage * userImage = [UIImage imageWithData:data];
+                [self.btnPhoto setImage:userImage forState:UIControlStateNormal];
+            }];
+        }
+    }
+
     self.txtEmail.text = currentUser.email;
 }
 
@@ -56,10 +67,10 @@
         switch (buttonIndex)
         {
             case 0:
-                // TODO: from camera
+                [self openCamera];
                 break;
             case 1:
-                // TODO: from library
+                [self openPhotoLibary];
                 break;
             default:
                 break;
@@ -70,7 +81,7 @@
         switch (buttonIndex)
         {
             case 0:
-                // TODO: remove photo
+                [self removeUserPhoto];
                 break;
             case 1:
                 [self showASNewPhoto];
@@ -83,6 +94,54 @@
 
 
 #pragma mark - Utility Methods
+
+
+-(void)removeUserPhoto
+{
+    [[WPUser currentUser] setPhoto:nil];
+    [[WPUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded)
+        {
+            [self.btnPhoto setImage:nil forState:UIControlStateNormal];
+        }
+        else
+        {
+            [self showAlertWithTitle:@"Oops" message:@"Can not remove photo"];
+        }
+    }];
+
+}
+
+-(void)imageSelected:(UIImage *)image
+{
+    self.imageCheckDisabled = YES;
+    
+    [self.btnPhoto setImage:image forState:UIControlStateNormal];
+    
+    NSData * imageData = UIImageJPEGRepresentation(image,0);
+    PFFile * photoFile = [PFFile fileWithData:imageData];
+    [photoFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error)
+        {
+            [self showAlertWithTitle:@"Upload Error" message:@"Image not uploaded!"];
+        }
+        else
+        {
+            [[WPUser currentUser] setPhoto:photoFile];
+            [[WPUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error)
+                {
+                    [self showAlertWithTitle:@"Save error" message:@"User not updated"];
+                }
+                else
+                {
+                    self.imageCheckDisabled = NO;
+                    [self showAlertWithTitle:@"Upload Success" message:@"Your profile photo changed."];
+                }
+            }];
+        }
+    }];
+}
 
 
 - (void)showASLogout
@@ -110,7 +169,7 @@
                       destructiveButtonTitle:nil
                            otherButtonTitles:@"Remove Photo" , @"Change Photo", nil];
     }
-    [self.asNewPhoto showFromTabBar:self.tabBarController.tabBar];
+    [self.asPhotoOptions showFromTabBar:self.tabBarController.tabBar];
 }
 
 - (void)showASNewPhoto

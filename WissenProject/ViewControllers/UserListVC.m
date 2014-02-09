@@ -34,7 +34,9 @@
     WPUser * currentUser = [WPUser currentUser];
     if (currentUser)
     {
-        [self getAllUsers];
+        [currentUser refreshInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            [self getAllUsers];
+        }];
     }
     else
     {

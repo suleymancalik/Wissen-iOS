@@ -302,7 +302,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Register" id="vY3-EN-Nlf">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="H5f-yH-kED">
+                                        <barButtonItem key="leftBarButtonItem" id="H5f-yH-kED">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kBn-xu-sAH">
                                                 <rect key="frame" x="16" y="7" width="35" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

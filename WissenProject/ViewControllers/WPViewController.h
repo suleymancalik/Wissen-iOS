@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface WPViewController : UIViewController
+<UINavigationControllerDelegate , UIImagePickerControllerDelegate>
 
 -(void)showAlertWithTitle:(NSString *)title
                   message:(NSString *)message;
 
 -(BOOL)isValidEmail:(NSString *)email;
+
+-(void)openPhotoLibary;
+
+-(void)openCamera;
+
+-(void)imageSelected:(UIImage *)image;
 
 @end
