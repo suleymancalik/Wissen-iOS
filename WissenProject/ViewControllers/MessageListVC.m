@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tblMessages;
 @property (strong,nonatomic) NSArray * messages;
+@property (strong,nonatomic) UIRefreshControl * pullToRefresh;
 
 @end
 
@@ -22,6 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.pullToRefresh = [[UIRefreshControl alloc] init];
+    [self.pullToRefresh addTarget:self
+                           action:@selector(pulledForRefresh)
+                 forControlEvents:UIControlEventValueChanged];
+    [self.tblMessages addSubview:self.pullToRefresh];
 }
 
 
@@ -36,6 +43,11 @@
 
 #pragma mark - Utility Methods
 
+-(void)pulledForRefresh
+{
+    [self getMyMessages];
+}
+
 
 -(void)getMyMessages
 {
@@ -47,6 +59,8 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.messages = objects;
         [self.tblMessages reloadData];
+        
+        [self.pullToRefresh endRefreshing];
     }];
 
 }
