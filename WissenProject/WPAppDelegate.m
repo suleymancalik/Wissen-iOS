@@ -12,11 +12,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
+    
     [self initializeApp:launchOptions];
     
     return YES;
 }
-							
+
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation setObject:[PFUser currentUser] forKey:@"owner"];
+    [currentInstallation saveInBackground];
+}
+
 
 -(void)initializeApp:(NSDictionary *)launchOptions
 {

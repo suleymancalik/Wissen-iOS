@@ -78,6 +78,14 @@
         [SVProgressHUD dismiss];
         if (succeeded)
         {
+            PFQuery * pushQuery = [PFInstallation query];
+            [pushQuery whereKey:@"owner" equalTo:newMessage.to];
+            
+            // Send push notification to query
+            [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:newMessage.text block:^(BOOL succeeded, NSError *error) {
+                NSLog(@"%@", error);
+            }];
+            
             [self.navigationController popViewControllerAnimated:YES];
         }
         else
