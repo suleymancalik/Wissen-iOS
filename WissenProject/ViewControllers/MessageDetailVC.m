@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
+@property (strong, nonatomic) UIView * fullScreenView;
+
 
 @end
 
@@ -64,14 +66,68 @@
     }
 }
 
+-(void)openImageFullScreen:(UIImage *)image
+{
+    if (!self.fullScreenView)
+    {
+        self.fullScreenView = [[UIView alloc] initWithFrame:self.view.bounds];
+        self.fullScreenView.backgroundColor = [UIColor blackColor];
+        
+        UIImageView * imageView = [[UIImageView alloc] init];
+        imageView.tag = 1000;
+        [self.fullScreenView addSubview:imageView];
+
+        
+        UIButton * closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [closeButton setTitle:@"Close" forState:UIControlStateNormal];
+        [closeButton addTarget:self action:@selector(closeFullScreen) forControlEvents:UIControlEventTouchUpInside];
+        float btnWidth = 100;
+        float btnHeight = 50;
+        closeButton.frame =
+        CGRectMake(self.fullScreenView.frame.size.width - btnWidth,0,btnWidth,btnHeight);
+        [self.fullScreenView addSubview:closeButton];
+
+    }
+    
+    UIImageView * imageView = (UIImageView *)[self.fullScreenView viewWithTag:1000];
+    [imageView setImage:image];
+    
+    CGSize imageSize = image.size;
+    CGFloat newWitdh = 0;
+    CGFloat newHeight = 0;
+    if(imageSize.width > imageSize.height)
+    {
+        newWitdh = self.fullScreenView.frame.size.width;
+        float ratio = newWitdh / imageSize.width;
+        newHeight = imageSize.height * ratio;
+    }
+    else
+    {
+        newHeight = self.fullScreenView.frame.size.height;
+        float ratio = newHeight / imageSize.height;
+        newWitdh = imageSize.width * ratio;
+    }
+    
+    imageView.frame = CGRectMake(0,0,newWitdh,newHeight);
+    imageView.center = self.fullScreenView.center;
+    
+    [[[[UIApplication sharedApplication] delegate] window] addSubview:self.fullScreenView];
+    
+}
+
 #pragma mark - Action Methods
 
+-(void)closeFullScreen
+{
+    [self.fullScreenView removeFromSuperview];
+}
 
 -(IBAction)actPhoto:(id)sender
 {
     UIImage * image = self.btnPhoto.imageView.image;
     if (image)
     {
+        [self openImageFullScreen:image];
         // TODO: full screen goster
     }
 }
