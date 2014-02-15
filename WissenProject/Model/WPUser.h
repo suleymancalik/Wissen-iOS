@@ -14,6 +14,8 @@
 
 @property(strong) PFFile * photo;
 
+@property(strong,nonatomic) UIImage * image;
+
 +(WPUser *)user;
 
 @end

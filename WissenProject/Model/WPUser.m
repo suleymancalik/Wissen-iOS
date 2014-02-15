@@ -13,6 +13,7 @@
 
 @dynamic photo;
 
+@synthesize image;
 
 +(WPUser *)user
 {

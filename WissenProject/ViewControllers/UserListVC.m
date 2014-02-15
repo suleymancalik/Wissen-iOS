@@ -182,6 +182,21 @@
     cell.textLabel.text = user.username;
     cell.detailTextLabel.text = user.updatedAt.description;
     
+    if(user.image)
+    {
+        [cell.imageView setImage:user.image];
+    }
+    else
+    {
+        [cell.imageView setImage:nil];
+        
+        [user.photo getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            user.image = [UIImage imageWithData:data];
+            NSIndexPath * ip = [self.tblUsers indexPathForCell:cell];
+            [self.tblUsers reloadRowsAtIndexPaths:@[ip] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }];
+    }
+    
     return cell;
 
 }
