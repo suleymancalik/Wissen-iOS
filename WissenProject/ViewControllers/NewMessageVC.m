@@ -78,8 +78,12 @@
         [SVProgressHUD dismiss];
         if (succeeded)
         {
+            PFQuery *innerQuery = [PFUser query];
+            [innerQuery whereKey:@"username" equalTo:newMessage.to.username];
+            
             PFQuery * pushQuery = [PFInstallation query];
-            [pushQuery whereKey:@"owner" equalTo:newMessage.to];
+            [pushQuery whereKey:@"user" matchesQuery:innerQuery];
+//            [pushQuery whereKey:@"user" equalTo:newMessage.to];
             
             // Send push notification to query
             [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:newMessage.text block:^(BOOL succeeded, NSError *error) {
