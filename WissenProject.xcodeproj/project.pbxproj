@@ -43,6 +43,15 @@
 		C585BAAB189E71BF002D9BD6 /* NewMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAAA189E71BF002D9BD6 /* NewMessageVC.m */; };
 		C585BAAE189E739E002D9BD6 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAAD189E739E002D9BD6 /* LoginVC.m */; };
 		C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C585BAB0189E73BA002D9BD6 /* RegisterVC.m */; };
+		C597498718AF632600FCE3D0 /* MessageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C597498618AF632600FCE3D0 /* MessageDetailVC.m */; };
+		C597498C18AF657A00FCE3D0 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = C597498818AF657A00FCE3D0 /* location.png */; };
+		C597498D18AF657A00FCE3D0 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597498918AF657A00FCE3D0 /* location@2x.png */; };
+		C597498E18AF657A00FCE3D0 /* locationSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C597498A18AF657A00FCE3D0 /* locationSelected.png */; };
+		C597498F18AF657A00FCE3D0 /* locationSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597498B18AF657A00FCE3D0 /* locationSelected@2x.png */; };
+		C597499418AF663A00FCE3D0 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499018AF663A00FCE3D0 /* photo.png */; };
+		C597499518AF663A00FCE3D0 /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499118AF663A00FCE3D0 /* photo@2x.png */; };
+		C597499618AF663A00FCE3D0 /* photoSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499218AF663A00FCE3D0 /* photoSelected.png */; };
+		C597499718AF663A00FCE3D0 /* photoSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499318AF663A00FCE3D0 /* photoSelected@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +116,16 @@
 		C585BAAD189E739E002D9BD6 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		C585BAAF189E73BA002D9BD6 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
 		C585BAB0189E73BA002D9BD6 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		C597498518AF632600FCE3D0 /* MessageDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDetailVC.h; sourceTree = "<group>"; };
+		C597498618AF632600FCE3D0 /* MessageDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailVC.m; sourceTree = "<group>"; };
+		C597498818AF657A00FCE3D0 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		C597498918AF657A00FCE3D0 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		C597498A18AF657A00FCE3D0 /* locationSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationSelected.png; sourceTree = "<group>"; };
+		C597498B18AF657A00FCE3D0 /* locationSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationSelected@2x.png"; sourceTree = "<group>"; };
+		C597499018AF663A00FCE3D0 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		C597499118AF663A00FCE3D0 /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
+		C597499218AF663A00FCE3D0 /* photoSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoSelected.png; sourceTree = "<group>"; };
+		C597499318AF663A00FCE3D0 /* photoSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoSelected@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +165,14 @@
 		C534740318A790E700DE48D7 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C597499018AF663A00FCE3D0 /* photo.png */,
+				C597499118AF663A00FCE3D0 /* photo@2x.png */,
+				C597499218AF663A00FCE3D0 /* photoSelected.png */,
+				C597499318AF663A00FCE3D0 /* photoSelected@2x.png */,
+				C597498818AF657A00FCE3D0 /* location.png */,
+				C597498918AF657A00FCE3D0 /* location@2x.png */,
+				C597498A18AF657A00FCE3D0 /* locationSelected.png */,
+				C597498B18AF657A00FCE3D0 /* locationSelected@2x.png */,
 				C534740418A790E700DE48D7 /* blue-dot.png */,
 				C534740518A790E700DE48D7 /* blue-dot@2x.png */,
 			);
@@ -284,6 +311,8 @@
 				C585BAAD189E739E002D9BD6 /* LoginVC.m */,
 				C585BAAF189E73BA002D9BD6 /* RegisterVC.h */,
 				C585BAB0189E73BA002D9BD6 /* RegisterVC.m */,
+				C597498518AF632600FCE3D0 /* MessageDetailVC.h */,
+				C597498618AF632600FCE3D0 /* MessageDetailVC.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -369,8 +398,16 @@
 				C534741018A7B09600DE48D7 /* SVProgressHUD.bundle in Resources */,
 				C534740718A790E700DE48D7 /* blue-dot@2x.png in Resources */,
 				C585BA57189E6282002D9BD6 /* InfoPlist.strings in Resources */,
+				C597498C18AF657A00FCE3D0 /* location.png in Resources */,
+				C597498E18AF657A00FCE3D0 /* locationSelected.png in Resources */,
+				C597499718AF663A00FCE3D0 /* photoSelected@2x.png in Resources */,
+				C597498F18AF657A00FCE3D0 /* locationSelected@2x.png in Resources */,
+				C597498D18AF657A00FCE3D0 /* location@2x.png in Resources */,
 				C585BA60189E6282002D9BD6 /* Main.storyboard in Resources */,
+				C597499618AF663A00FCE3D0 /* photoSelected.png in Resources */,
 				C534740618A790E700DE48D7 /* blue-dot.png in Resources */,
+				C597499418AF663A00FCE3D0 /* photo.png in Resources */,
+				C597499518AF663A00FCE3D0 /* photo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +432,7 @@
 				C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */,
 				C585BA59189E6282002D9BD6 /* main.m in Sources */,
 				C534741118A7B09600DE48D7 /* SVProgressHUD.m in Sources */,
+				C597498718AF632600FCE3D0 /* MessageDetailVC.m in Sources */,
 				C585BA86189E6931002D9BD6 /* WPUser.m in Sources */,
 				C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */,
 				C585BAA8189E71AF002D9BD6 /* MessageListVC.m in Sources */,

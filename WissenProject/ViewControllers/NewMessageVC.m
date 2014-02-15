@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *txtMessage;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btnSend;
 
+@property (strong, nonatomic) UIImage * selectedImage;
+@property (strong, nonatomic) PFGeoPoint * selectedGeopoint;
+
 @end
 
 @implementation NewMessageVC
