@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Wissen. All rights reserved.
 //
 
-#import "WPViewController.h"
+#import "PhotoSelectionVC.h"
 
-@interface ProfileVC : WPViewController
+@interface ProfileVC : PhotoSelectionVC
 
 @end

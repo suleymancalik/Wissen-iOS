@@ -9,14 +9,12 @@
 #import "ProfileVC.h"
 
 @interface ProfileVC ()
-<UIActionSheetDelegate>
+
 
 @property (weak, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 
 @property (strong, nonatomic) UIActionSheet * asLogout;
-@property (strong, nonatomic) UIActionSheet * asPhotoOptions;
-@property (strong, nonatomic) UIActionSheet * asNewPhoto;
 
 @property (nonatomic) BOOL imageCheckDisabled;
 
@@ -158,32 +156,6 @@
     [self.asLogout showFromTabBar:self.tabBarController.tabBar];
 }
 
-- (void)showASPhotoOptions
-{
-    if(!self.asPhotoOptions)
-    {
-        self.asPhotoOptions =
-        [[UIActionSheet alloc] initWithTitle:nil
-                                    delegate:self
-                           cancelButtonTitle:@"Cancel"
-                      destructiveButtonTitle:nil
-                           otherButtonTitles:@"Remove Photo" , @"Change Photo", nil];
-    }
-    [self.asPhotoOptions showFromTabBar:self.tabBarController.tabBar];
-}
-
-- (void)showASNewPhoto
-{
-    if (!self.asNewPhoto)
-    {
-        self.asNewPhoto =
-        [[UIActionSheet alloc] initWithTitle:@"Add Photo"
-                                    delegate:self
-                           cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil
-                           otherButtonTitles:@"From Camera",@"From Library", nil];
-    }
-    [self.asNewPhoto showFromTabBar:self.tabBarController.tabBar];
-}
 
 
 #pragma mark - Action Methods

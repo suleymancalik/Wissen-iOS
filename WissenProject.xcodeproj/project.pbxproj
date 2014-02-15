@@ -52,6 +52,7 @@
 		C597499518AF663A00FCE3D0 /* photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499118AF663A00FCE3D0 /* photo@2x.png */; };
 		C597499618AF663A00FCE3D0 /* photoSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499218AF663A00FCE3D0 /* photoSelected.png */; };
 		C597499718AF663A00FCE3D0 /* photoSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C597499318AF663A00FCE3D0 /* photoSelected@2x.png */; };
+		C597499A18AF6D7C00FCE3D0 /* PhotoSelectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C597499918AF6D7C00FCE3D0 /* PhotoSelectionVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		C597499118AF663A00FCE3D0 /* photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@2x.png"; sourceTree = "<group>"; };
 		C597499218AF663A00FCE3D0 /* photoSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photoSelected.png; sourceTree = "<group>"; };
 		C597499318AF663A00FCE3D0 /* photoSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoSelected@2x.png"; sourceTree = "<group>"; };
+		C597499818AF6D7C00FCE3D0 /* PhotoSelectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoSelectionVC.h; sourceTree = "<group>"; };
+		C597499918AF6D7C00FCE3D0 /* PhotoSelectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoSelectionVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +302,8 @@
 			children = (
 				C585BA9D189E70DC002D9BD6 /* WPViewController.h */,
 				C585BA9E189E70DC002D9BD6 /* WPViewController.m */,
+				C597499818AF6D7C00FCE3D0 /* PhotoSelectionVC.h */,
+				C597499918AF6D7C00FCE3D0 /* PhotoSelectionVC.m */,
 				C585BAA0189E714C002D9BD6 /* UserListVC.h */,
 				C585BAA1189E714C002D9BD6 /* UserListVC.m */,
 				C585BAA3189E71A1002D9BD6 /* ProfileVC.h */,
@@ -432,6 +437,7 @@
 				C585BAB1189E73BA002D9BD6 /* RegisterVC.m in Sources */,
 				C585BA59189E6282002D9BD6 /* main.m in Sources */,
 				C534741118A7B09600DE48D7 /* SVProgressHUD.m in Sources */,
+				C597499A18AF6D7C00FCE3D0 /* PhotoSelectionVC.m in Sources */,
 				C597498718AF632600FCE3D0 /* MessageDetailVC.m in Sources */,
 				C585BA86189E6931002D9BD6 /* WPUser.m in Sources */,
 				C585BA89189E695B002D9BD6 /* WPMessage.m in Sources */,

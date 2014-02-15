@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Wissen. All rights reserved.
 //
 
-#import "WPViewController.h"
+#import "PhotoSelectionVC.h"
 
-@interface NewMessageVC : WPViewController
+@interface NewMessageVC : PhotoSelectionVC
 
 @property(nonatomic,strong) WPUser * toUser;
 
