@@ -10,4 +10,6 @@
 
 @interface MessageDetailVC : WPViewController
 
+@property(strong,nonatomic) WPMessage * message;
+
 @end

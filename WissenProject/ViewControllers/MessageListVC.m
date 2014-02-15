@@ -7,6 +7,7 @@
 //
 
 #import "MessageListVC.h"
+#import "MessageDetailVC.h"
 
 @interface MessageListVC ()
 <UITableViewDataSource>
@@ -40,6 +41,22 @@
     [self getMyMessages];
 }
 
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"MessageDetailSegue"])
+    {
+        MessageDetailVC * detailVC = segue.destinationViewController;
+        
+        UITableViewCell * selectedCell = sender;
+        if([selectedCell isKindOfClass:[UITableViewCell class]])
+        {
+            NSIndexPath * indexpath = [self.tblMessages indexPathForCell:selectedCell];
+            detailVC.message = self.messages[indexpath.row];
+        }
+    }
+    
+}
 
 #pragma mark - Utility Methods
 
