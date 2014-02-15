@@ -78,7 +78,7 @@
         [SVProgressHUD dismiss];
         if (succeeded)
         {
-            PFQuery *innerQuery = [PFUser query];
+            PFQuery *innerQuery = [WPUser query];
             [innerQuery whereKey:@"username" equalTo:newMessage.to.username];
             
             PFQuery * pushQuery = [PFInstallation query];
