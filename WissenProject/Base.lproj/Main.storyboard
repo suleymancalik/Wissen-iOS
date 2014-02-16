@@ -309,7 +309,7 @@
         <!--Message DetailVC - Message Detail-->
         <scene sceneID="fT9-AK-ZRp">
             <objects>
-                <viewController id="r7l-d7-hs4" customClass="MessageDetailVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MessageDetailVC" id="r7l-d7-hs4" customClass="MessageDetailVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b5s-C1-9Rv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

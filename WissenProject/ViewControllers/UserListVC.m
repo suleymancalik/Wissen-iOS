@@ -8,6 +8,7 @@
 
 #import "UserListVC.h"
 #import "NewMessageVC.h"
+#import "WPAppDelegate.h"
 
 #define SegueNewMessage @"NewMessageSegue"
 
@@ -36,6 +37,8 @@
 {
     [super viewDidLoad];
     
+    WPAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.tabbar = self.tabBarController;
     [self.tblUsers setContentOffset:CGPointMake(0,44) animated:NO];
 }
 

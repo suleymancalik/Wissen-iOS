@@ -83,13 +83,20 @@
             
             PFQuery * pushQuery = [PFInstallation query];
             [pushQuery whereKey:@"user" matchesQuery:innerQuery];
-//            [pushQuery whereKey:@"user" equalTo:newMessage.to];
+
             
-            // Send push notification to query
-            [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:newMessage.text block:^(BOOL succeeded, NSError *error) {
+            NSDictionary *data = @{
+                                   @"alert" : newMessage.text ,
+                                   @"id"    : newMessage.objectId};
+            
+            [PFPush sendPushDataToQueryInBackground:pushQuery withData:data block:^(BOOL succeeded, NSError *error) {
                 NSLog(@"%@", error);
             }];
             
+//            [PFPush sendPushMessageToQueryInBackground:pushQuery withMessage:newMessage.text block:^(BOOL succeeded, NSError *error) {
+//                NSLog(@"%@", error);
+//            }];
+//            
             [self.navigationController popViewControllerAnimated:YES];
         }
         else
