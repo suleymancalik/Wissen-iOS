@@ -11,5 +11,6 @@
 @interface MessageDetailVC : WPViewController
 
 @property(strong,nonatomic) WPMessage * message;
+@property(strong,nonatomic) NSString * messageId;
 
 @end

@@ -67,16 +67,14 @@
     
     if ([WPUser currentUser])
     {
-        NSDictionary * aps = pushDict[@"aps"];
-        NSString * messageId = aps[@"id"];
-        WPMessage * message = [WPMessage objectWithoutDataWithObjectId:messageId];
-        [message fetch];
-        
+//        NSDictionary * aps = pushDict[@"aps"];
+        NSString * messageId = pushDict[@"id"];
+
         UINavigationController * navCont = [self.tabbar.viewControllers firstObject];
         
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         MessageDetailVC * messageDetail = [storyboard instantiateViewControllerWithIdentifier:@"MessageDetailVC"];
-        messageDetail.message = message;
+        messageDetail.messageId = messageId;
         [navCont pushViewController:messageDetail animated:YES];
         
         

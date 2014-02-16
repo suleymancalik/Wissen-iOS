@@ -9,6 +9,7 @@
 #import "LoginVC.h"
 
 @interface LoginVC ()
+<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 
@@ -19,17 +20,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.txtUsername.delegate = self;
+    self.txtPassword.delegate = self;
 }
 
+
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if([textField isEqual:self.txtUsername])
+        [self.txtPassword becomeFirstResponder];
+    else if([textField isEqual:self.txtPassword])
+        [self actLogin:nil];
+    return YES;
+}
 
 #pragma mark - Utility Methods
 
 -(void)loginWithUsername:(NSString *)username
                 password:(NSString *)password
 {
+    [SVProgressHUD show];
     [WPUser logInWithUsernameInBackground:username
                                  password:password
                                     block:^(PFUser *user, NSError *error) {
+                                        [SVProgressHUD dismiss];
                                         if (error)
                                         {
                                             [self showAlertWithTitle:@"Login Error"

@@ -32,6 +32,16 @@
     [super viewDidLoad];
     
     
+    if (!self.message)
+    {
+        WPMessage * message = [WPMessage objectWithoutDataWithObjectId:self.messageId];
+        [message fetch];
+        
+        [message.from fetch];
+        
+        self.message = message;
+    }
+    
     self.lblFrom.text = self.message.from.username;
     self.lblDate.text = self.message.createdAt.description;
     self.textView.text = self.message.text;
